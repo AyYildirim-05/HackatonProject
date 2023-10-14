@@ -1,9 +1,9 @@
 # HackatonProject
 
-This is a repository for the Bell Geekfest Hackathon. This project was made by Seb, Ahmet, and Arya. 
+This is a repository for the Bell Geekfest Hackathon. This project was made by Seb, Ahmet, Kok, and Adam.
 
 <h2>Our Idea:</h2>
-<p>Our amazing, invative idea revolves around cybersecurity. The main focus of our solution is data privacy. This is how it works...</p>
+<p>Our amazing, invative idea revolves around cybersecurity. The main focus of our solution is data privacy. We aim to create a firewall </p>
 
 <h2>The focus of our program is:</h2>
 <ul>
@@ -21,7 +21,7 @@ This is a repository for the Bell Geekfest Hackathon. This project was made by S
 </ul>
 <h3>Ahmet</h3>
 <ul>
-  <li></li>
+  <li>Enjoys coding</li>
   <li></li>
   <li></li>
 </ul>
