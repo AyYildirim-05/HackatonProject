@@ -25,7 +25,13 @@ This is a repository for the Bell Geekfest Hackathon. This project was made by S
   <li></li>
   <li></li>
 </ul>
-<h3>Arya</h3>
+<h3>Adam Brichi</h3>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<h3>Kok Ving</h3>
 <ul>
   <li></li>
   <li></li>
