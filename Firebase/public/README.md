@@ -22,8 +22,8 @@ This is a repository for the Bell Geekfest Hackathon. This project was made by S
 <h3>Ahmet</h3>
 <ul>
   <li>Enjoys coding</li>
-  <li>A new programmer</li>
-  <li>Likes to 3D model</li>
+  <li></li>
+  <li></li>
 </ul>
 <h3>Adam Brichi</h3>
 <ul>
