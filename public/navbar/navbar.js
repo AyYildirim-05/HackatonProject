@@ -1,4 +1,4 @@
-fetch("http://localhost:5500/Firebase/public/navbar/navbar.html")
+fetch("http://localhost:5500/public/navbar/navbar.html")
   .then(res => res.text())
   .then(text => {
     let oldelem = document.querySelector("script#replace_with_navbar");
