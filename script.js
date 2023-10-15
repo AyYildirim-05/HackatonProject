@@ -1,7 +1,7 @@
 // import dotenv from 'dotenv'
 // dotenv.config();
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js';
 import { getFirestore, collection, setDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"
 
 const firebaseConfig = {
@@ -16,6 +16,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const COLLECTION_USERS = collection(db, 'users');
+const signWithGoogleButton = document.getElementById('log-in-connect-google')
 
 
 console.log("Auth Domain", firebaseConfig.authDomain)
@@ -72,6 +73,30 @@ async function getUser(authUser) {
         userData = docSnap.data()
     }
     alert(`Bienvenue ${userData.name}`)
+}
+
+signWithGoogleButton.addEventListener('click', signInWithGoogle)
+
+function signInWithGoogle() {
+    console.log("allo")
+    signInWithPopup(auth, provider)
+    .then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
 }
 
 // document.querySelector('#log-in-form').addEventListener('submit', function (event) {

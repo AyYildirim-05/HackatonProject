@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Forgotten</title>
-    <script type="module" src="../script.js"></script>
+    <script type="module" src="/script.js"></script>
+    <script type="module">
+      import { submitLogIn } from "../script.js"
+      window.submitLogIn = submitLogIn
+    </script>
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     <link rel="stylesheet" href="/Style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -14,7 +18,7 @@
   <script id="replace_with_navbar" src="../navbar/navbar.js"></script>
     <br><br><br><br>
     <div id="LoginArea">
-    <form id="log-in-form" name="log-in">
+    <form id="log-in-form" name="log-in" onsubmit="event.preventDefault(); submitLogIn()">
         <div class="mb-3">
           <label for="email" class="form-label">Courriel</label>
           <input required type="email" class="form-control" id="email" aria-describedby="emailHelp">
@@ -28,12 +32,12 @@
           <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
         </div>
         <br>
-        <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001"></div>
+        <div class="h-captcha" data-sitekey="219f420a-db34-4b2b-9584-cd130aa337cc"></div>
         <br>
         <button type="submit" class="btn btn-primary">Se connecter</button>
       </form>
       <br>
-      <button type="button" class="btn btn-secondary">Se connecter avec Google</button>
+      <button type="button" class="btn btn-secondary" id="log-in-connect-google">Se connecter avec Google</button>
       <br><br>
       <button class="btn btn-secondary">Mot de passe oublié</button>
     </div>
