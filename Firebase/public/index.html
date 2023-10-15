@@ -17,27 +17,35 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="/Firebase/public/Style.css" />
   </head>
-  <body>
-    <script id="replace_with_navbar" src="navbar/navbar.js"></script>
-    <header>Page header</header>
-    <h1>Accueil</h1>
-    <div id="login_section">
-      <button
-        onclick="window.location.href='/log-in'"
-        type="button"
-        class="btn btn-primary"
-      >
-        Se Connecter
-      </button>
-      <button
-        onclick="window.location.href='/sign-up'"
-        type="button"
-        class="btn btn-primary"
-      >
-        S'inscrire
-      </button>
+  <body class="bg-secondary">
+    <script
+      id="replace_with_navbar"
+      src="/Firebase/public/navbar/navbar.js"
+    ></script>
+    <br>
+    <!-- <header>Page header</header> -->
+    <div id="login-section">
+      <label><h1>Accueil</h1></label>
+      <br>
+      <div>
+        <button
+          onclick="window.location.href='/Firebase/public/log-in'"
+          type="button"
+          class="btn btn-primary"
+        >
+          Se Connecter
+        </button>
+        <br>
+        <button
+          onclick="window.location.href='/Firebase/public/sign-up'"
+          type="button"
+          class="btn btn-primary"
+        >
+          S'inscrire
+        </button>
+      </div>
     </div>
   </body>
 </html>

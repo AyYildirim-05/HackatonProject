@@ -17,6 +17,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const COLLECTION_USERS = collection(db, 'users');
 const signWithGoogleButton = document.getElementById('log-in-connect-google')
+const forgottentPassWordButton = document.getElementById('forgotten-password')
 
 
 console.log("Auth Domain", firebaseConfig.authDomain)
